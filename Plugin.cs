@@ -2,7 +2,7 @@ using BepInEx;
 using BepInEx.Configuration;
 using HarmonyLib;
 
-[BepInPlugin("DisableCompanysDenoise", "DisableCompanysDenoise", "1.0.0")]
+[BepInPlugin("DisableCompanysDenoise", "DisableCompanysDenoise", "1.0.1")]
 public class Plugin : BaseUnityPlugin
 {
     public static ConfigFile config;
