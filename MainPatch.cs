@@ -22,8 +22,12 @@ public class MainPatch
         public static void Update(ref PlayerControllerB __instance)
         {
             var noiseLevel = enableNoiseSuppression.Value ? NoiseSuppressionLevels.Moderate : NoiseSuppressionLevels.Disabled;
-            Debug.Log("Noise Suppression Level: " + noiseLevel.ToString());
+            Debug.Log($"Enabled? : {enableNoiseSuppression.Value}Noise Suppression Level: " + noiseLevel.ToString());
             VoiceSettings.Instance.DenoiseAmount = noiseLevel;
+            VoiceSettings.Instance.BackgroundSoundRemovalEnabled = enableNoiseSuppression.Value;
+            VoiceSettings.Instance.Quality = Dissonance.AudioQuality.High;
+            VoiceSettings.Instance.VadSensitivity = VadSensitivityLevels.VeryHighSensitivity;
+
         }
     }
 }
