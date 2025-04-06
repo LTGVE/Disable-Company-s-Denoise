@@ -25,7 +25,7 @@ public class MainPatch
             Debug.Log($"Enabled? : {enableNoiseSuppression.Value}Noise Suppression Level: " + noiseLevel.ToString());
             VoiceSettings.Instance.DenoiseAmount = noiseLevel;
             VoiceSettings.Instance.BackgroundSoundRemovalEnabled = enableNoiseSuppression.Value;
-            VoiceSettings.Instance.Quality = Dissonance.AudioQuality.High;
+  //          VoiceSettings.Instance.Quality = Dissonance.AudioQuality.High;
             VoiceSettings.Instance.VadSensitivity = VadSensitivityLevels.VeryHighSensitivity;
 
         }
